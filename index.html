@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priya-Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+DE+LA+Guides&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Priya<span class="purple">.</span></div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection" id="home">
+            <div class="leftsection">
+                Hi, My name is<span class="purple"> Priya</span>
+                <div>and</div>
+                <span class="tagline"><span id="element"></span></span>
+            </div>
+
+            <div class="rightsection">
+                <img src="web.png" alt="Illustration representing software development">
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="about">
+            <h1>About <span class="purple">Me</span></h1>
+            <div class="about-content">
+                <p>
+                    I'm Priya, a Computer Science student from Rajiv Gandhi Proudyogiki
+                    Vishwavidyalaya, Bhopal, graduating in 2026. I build full-stack applications
+                    end to end &mdash; from REST APIs and database schemas to the React dashboards
+                    that sit on top of them &mdash; and I've been exploring GenAI lately, wiring
+                    up RAG pipelines and real-time transcription into working products. I like
+                    problems with a lot of moving parts: websockets, background jobs, edge cases
+                    that only show up under real usage.
+                </p>
+                <div class="about-stats">
+                    <div>
+                        <span class="num">200+</span>
+                        <span class="label">DSA Problems Solved</span>
+                    </div>
+                    <div>
+                        <span class="num">2nd</span>
+                        <span class="label">Rank, College Coding Contest</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="skills">
+            <h1>My <span class="purple">Skills</span></h1>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>React.js</li>
+                        <li>Tailwind CSS</li>
+                        <li>Material-UI</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Backend &amp; Databases</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Spring Boot</li>
+                        <li>MongoDB</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>AI &amp; GenAI</h3>
+                    <ul>
+                        <li>Google Gemini API</li>
+                        <li>RAG</li>
+                        <li>ChromaDB</li>
+                        <li>Prompt Engineering</li>
+                        <li>Tesseract.js</li>
+                        <li>Deepgram</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools &amp; Infrastructure</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub Actions</li>
+                        <li>Docker</li>
+                        <li>Linux/Shell</li>
+                        <li>Postman</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Core Concepts</h3>
+                    <ul>
+                        <li>Data Structures &amp; Algorithms</li>
+                        <li>OOP</li>
+                        <li>REST APIs</li>
+                        <li>DBMS</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="projects">
+            <h1><span class="purple">Projects</span></h1>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-index">01</div>
+                    <h3>MeetMind AI</h3>
+                    <p>A real-time meeting assistant that transcribes multi-speaker audio live,
+                        then lets you search and ask questions about past discussions through a
+                        RAG pipeline. Generates meeting summaries and action-items automatically
+                        as soon as the call ends, with a live dashboard synced across all
+                        participants via websockets.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>LiveKit</span>
+                        <span>Deepgram</span>
+                        <span>Gemini API</span>
+                        <span>ChromaDB</span>
+                        <span>Socket.io</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#">Source Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-index">02</div>
+                    <h3>Digital Healthcare Platform</h3>
+                    <p>A hospital management web app for tracking patient history and appointments,
+                        with role-based access for Doctors, Patients, and Admins secured with JWT
+                        and bcrypt. Medical records are stored on IPFS so they stay decentralized
+                        and tamper-proof, and patients can download their full history as a PDF.</p>
+                    <div class="project-tags">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MongoDB</span>
+                        <span>React</span>
+                        <span>JWT</span>
+                        <span>IPFS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#">Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="achievements">
+            <h1><span class="purple">Achievements</span></h1>
+            <ul class="achievements-list">
+                <li>Solved 200+ Data Structures and Algorithms problems across LeetCode, GeeksforGeeks, and Codeforces.
+                </li>
+                <li>Secured 2nd Rank in the Annual College Coding Contest out of 300+ participants.</li>
+                <li>Mentored and guided junior college students in foundational programming concepts.</li>
+                <li>Completed intensive Internship and Job Preparation training via Internshala.</li>
+                <li>Participated in the AI Tools Workshop by be10X, focused on practical GenAI implementations and
+                    prompt engineering.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <h1>Get In <span class="purple">Touch</span></h1>
+            <div class="contact-wrap">
+                <div class="contact-info">
+                    <p>Have a project in mind, or just want to say hi? My inbox is open.</p>
+                    <div class="contact-links">
+                        <a href="mailto:priyasikarwar511@gmail.com">priyasikarwar511@gmail.com</a>
+                        <a href="#">Gwalior, Madhya Pradesh</a>
+                        <a href="https://github.com/priyasikarwar511" target="_blank" rel="noopener">GitHub</a>
+                        <a href="http://www.linkedin.com/in/priya-sikarwar" target="_blank" rel="noopener">LinkedIn</a>
+                      
+                    </div>
+                </div>
+                <form action="mailto:priyasikarwar511@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="message" placeholder="Your message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; <span id="year"></span> Priya. Built with care.
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
