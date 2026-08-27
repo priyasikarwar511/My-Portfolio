@@ -1,0 +1,598 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(0, 0, 33);
+    color: beige;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    outline-color: rgb(170, 107, 228);
+}
+
+
+/* ---------- NAV ---------- */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(18, 18, 62);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 0 5vw;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(153, 153, 226);
+    font-size: 1.01rem;
+}
+
+.left {
+    font-family: 'Playwrite DE LA Guides', cursive;
+    font-size: 1.6rem;
+}
+
+/* Hamburger button: hidden on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 19px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 20;
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: beige;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
+.purple {
+    color: rgb(170, 107, 228);
+}
+
+/* ---------- HERO ---------- */
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.firstsection>div {
+    width: 30%;
+    min-width: 280px;
+}
+
+.leftsection {
+    font-size: 3rem;
+    line-height: 1.3;
+}
+
+.leftsection .tagline {
+    font-size: 1.4rem;
+    min-height: 2.6em;
+    color: rgb(153, 153, 226);
+    font-weight: 400;
+    margin-top: 10px;
+    display: block;
+}
+
+#element {
+    color: rgb(170, 107, 228);
+}
+
+.rightsection {
+    display: flex;
+    justify-content: center;
+}
+
+.rightsection img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 40px 0;
+    border-radius: 12px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(153, 153, 226, 0.25);
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+section {
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+section>h1 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+section>h1 .purple {
+    display: inline;
+}
+
+/* ---------- SKILLS ---------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.skill-card {
+    background-color: rgb(18, 18, 62);
+    border: 1px solid rgba(153, 153, 226, 0.2);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.skill-card h3 {
+    color: rgb(170, 107, 228);
+    margin-bottom: 14px;
+    font-size: 1.1rem;
+}
+
+.skill-card ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-card li {
+    background-color: rgba(153, 153, 226, 0.12);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* ---------- ABOUT ---------- */
+.about-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-content p {
+    flex: 1;
+    min-width: 280px;
+    line-height: 1.9;
+    color: rgba(245, 245, 220, 0.85);
+}
+
+.about-stats {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-stats div {
+    text-align: center;
+}
+
+.about-stats .num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(170, 107, 228);
+    display: block;
+}
+
+.about-stats .label {
+    font-size: 0.85rem;
+    color: rgba(245, 245, 220, 0.7);
+}
+
+/* ---------- PROJECTS ---------- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.project-card {
+    background-color: rgb(18, 18, 62);
+    border: 1px solid rgba(153, 153, 226, 0.2);
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgb(170, 107, 228);
+}
+
+.project-index {
+    font-family: 'Playwrite DE LA Guides', cursive;
+    color: rgba(153, 153, 226, 0.5);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    color: rgba(245, 245, 220, 0.8);
+    line-height: 1.7;
+    flex-grow: 1;
+    margin-bottom: 18px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.project-tags span {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border: 1px solid rgba(153, 153, 226, 0.4);
+    border-radius: 20px;
+    color: rgb(153, 153, 226);
+}
+
+.project-links a {
+    color: rgb(170, 107, 228);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-right: 18px;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- ACHIEVEMENTS ---------- */
+.achievements-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.achievements-list li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    line-height: 1.7;
+    color: rgba(245, 245, 220, 0.85);
+}
+
+.achievements-list li::before {
+    content: '\2726';
+    color: rgb(170, 107, 228);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ---------- CONTACT ---------- */
+.contact-wrap {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 260px;
+}
+
+.contact-info p {
+    color: rgba(245, 245, 220, 0.85);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-links a {
+    color: beige;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.contact-links a:hover {
+    color: rgb(170, 107, 228);
+}
+
+form {
+    flex: 1;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form input,
+form textarea {
+    background-color: rgb(18, 18, 62);
+    border: 1px solid rgba(153, 153, 226, 0.3);
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: beige;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid rgb(170, 107, 228);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form button {
+    background-color: rgb(170, 107, 228);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    color: rgb(0, 0, 33);
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+form button:hover {
+    opacity: 0.85;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: rgba(245, 245, 220, 0.5);
+    font-size: 0.85rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+    section,
+    hr {
+        max-width: 90vw;
+    }
+
+    .leftsection {
+        font-size: 2.5rem;
+    }
+
+    .rightsection img {
+        max-width: 340px;
+    }
+}
+
+/* Tablets / large phones - hamburger menu kicks in */
+@media (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+        padding: 0 5vw;
+        height: 70px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .right {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(18, 18, 62);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .right#nav-menu.open {
+        max-height: 400px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 14px 0;
+    }
+
+    section,
+    hr {
+        max-width: 92vw;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .firstsection {
+        margin: 40px 0;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .firstsection > div {
+        width: 100%;
+    }
+
+    .rightsection {
+        order: -1;
+    }
+
+    .leftsection {
+        font-size: 2.2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-stats {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contact-wrap {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .left {
+        font-size: 1.3rem;
+    }
+
+    section,
+    hr {
+        max-width: 94vw;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    section > h1 {
+        font-size: 1.7rem;
+        margin-bottom: 28px;
+    }
+
+    .leftsection {
+        font-size: 1.8rem;
+        line-height: 1.35;
+    }
+
+    .leftsection .tagline {
+        font-size: 1.05rem;
+    }
+
+    .rightsection img {
+        max-width: 260px;
+        margin: 24px 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .about-stats {
+        gap: 20px;
+    }
+
+    .about-stats .num {
+        font-size: 1.6rem;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .project-card {
+        transition: none;
+    }
+
+    .hamburger span,
+    .right {
+        transition: none;
+    }
+}
